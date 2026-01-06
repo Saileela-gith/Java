@@ -1,16 +1,19 @@
 import java.util.Scanner;
-public class printsum {
+public class printsum2 {
     //function with parameters
-    public static void add(int num1,int num2)
+    public static int add(int num1,int num2)
     {
         int sum=num1+num2;
-        System.out.print("The sum of num1 and num2 is:"+(num1+num2));
+        return sum;
     }
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
         int a=sc.nextInt();
         int b=sc.nextInt();
-        add(a,b);//arguments
+        int sum = add(a,b);//arguments
+        System.out.print("The sum is:"+sum);
     }
 }
+
+
