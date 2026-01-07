@@ -1,27 +1,25 @@
 import java.util.Scanner;
 public class largestnumber {
-    //this code is to find the largest of three numbers
+    //this code is regarding to find the largest number in the array
+    public static int largest(int numbers[])
+    {
+       int i;
+       int larger=Integer.MIN_VALUE;//this is smallest value 
+       for(i=0;i<numbers.length;i++)
+       {
+         if(larger<numbers[i])
+         {
+            larger=numbers[i];
+         }
+       }
+       return larger;
+       }
+
     public static void main(String args[])
     {
-        Scanner sc=new Scanner(System.in);
-        System.out.print("Enter the 1st number:");
-        int a=sc.nextInt();
-        System.out.print("Enter the 2nd number");
-        int b=sc.nextInt();
-        System.out.print("Enter the 3rd number:");
-        int c=sc.nextInt();
-        if(a>b && a>c)
-        {
-            System.out.print(a);
-
-        }
-        else if(b>a && b>c)
-        {
-          System.out.print(b);
-        }
-        else 
-        {
-            System.out.print(c);
-        }
+       int numbers[]={1,2,8,5,6};
+       int result=largest(numbers);
+       System.out.print("The larger number is:"+result);
     }
 }
+
