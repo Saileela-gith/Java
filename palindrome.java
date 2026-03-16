@@ -1,22 +1,23 @@
 import java.util.Scanner;
 public class palindrome {
-    //this code is to check the given number is palindrome or not
-    public static void number(int n)
+    //checking the number is palindrome or not 
+    public static void reverse(int n)
     {
-        int original=n;
         int rev=0;
+        int ld;
+        int original=n;
         while(n>0)
         {
-            int ld=n%10;
-            rev=(rev*10)+ld;
+            ld=n%10;
+            rev=(rev*10)+ld;//reversing a number using the formula
             n=n/10;
         }
-        if(rev==original)//condition to check the number is palindrome 
+        if(rev==original)//comparing a number
         {
-            System.out.print("The given number is palindrome");
+            System.out.print("The number is palindrome");
         }
         else{
-            System.out.print("The given number is not a plaindrome");
+            System.out.print("The number is not a palindrome");
         }
     }
     public static void main(String args[])
@@ -24,6 +25,7 @@ public class palindrome {
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter the number:");
         int n=sc.nextInt();
-        number(n);
+        reverse(n);
     }
+    
 }

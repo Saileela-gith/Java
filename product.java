@@ -1,13 +1,17 @@
-import java.util.Scanner;
+import java.util.*;
 public class product {
-    public static int multiplication(int a,int b)//function defination with parameters
+    public static int printadd(int num1,int num2)
     {
-        int mult=a*b;
-        return mult; //return statement
+        int sum=num1+num2;
+        return sum;
     }
+
     public static void main(String args[])
     {
-        int result=multiplication(5,5);//function call with arguments
-        System.out.print("The annswer is:"+result);
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int answ=printadd(a,b);
+        System.out.print("The answer is:"+answ);
     }
 }

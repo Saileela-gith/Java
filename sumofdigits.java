@@ -1,23 +1,23 @@
 import java.util.Scanner;
-public class reverse {
-    //reversing a number
-    public static void revers(int n)
+public class sumofdigits {
+    //sum of the digit
+    public static void sumdigits(int n)
     {
         int ld;
-        int rev=0;
+        int sum=0;
         while(n>0)
         {
             ld=n%10;
-            rev=(rev*10)+ld;
+            sum=sum+ld;
             n=n/10;
         }
-        System.out.print("The reversed number is:"+rev);
+        System.out.print("The sum of the number is:"+sum);
     }
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter the number:");
         int n=sc.nextInt();
-        revers(n);
-    }
+        sumdigits(n);
+        }
 }

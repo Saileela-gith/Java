@@ -1,21 +1,23 @@
 import java.util.Scanner;
 public class average {
-    //this code is regarding the average of three numbers
-    public static void numbers(int a,int b,int c)
+    //this code is regarding the average of three numbers 
+    public static void aver(int a,int b,int c)
     {
-        int total=a+b+c;
-        int avg=(total)/3;
-        System.out.print("The average of three numbers is:"+avg);
+        int total;
+        int avg;
+        total=(a+b+c);
+        avg=(total)/3;
+        System.out.print("The average of the three numbers is:"+avg);
     }
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        System.out.print("Enter the a value:");
+        System.out.print("Enter the value of the a:");
         int a=sc.nextInt();
-        System.out.print("Enter the b value:");
+        System.out.print("Enter the value of the b:");
         int b=sc.nextInt();
-        System.out.print("Enter the c value:");
+        System.out.print("Enter the value of the c:");
         int c=sc.nextInt();
-        numbers(a,b,c);
+        aver(a,b,c);
     }
 }

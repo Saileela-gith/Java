@@ -1,27 +1,37 @@
 import java.util.Scanner;
 public class binomial {
-    public static int printfact(int n)
+    //calculating the binomial coefficient
+    public static int factori(int n)//factorial function
     {
-        //this code is regarding calculating binomial coefficient expression
-        int fact=1;
+        int fact=1;//assining the factorial of a number as 1
         int i;
         for(i=1;i<=n;i++)
         {
-            fact=fact*i;
+            fact=fact*i;//calculating the factorial
         }
         return fact;
+
     }
-    public static int bincoeff(int n,int r)
+    public static int factori(int n,int r)
     {
-        int fact_n=printfact(n);
-        int fact_r=printfact(r);
-        int fact_nmr=printfact(n-r);
-        int coeff=(fact_n)/(fact_r)*(fact_nmr);
-        return coeff;
+        int n_fact;
+        int r_fact;
+        int nmr;
+        n_fact=factori(n);
+        r_fact=factori(r);
+        nmr=factori(n-r);
+        int answ=((n_fact)/(r_fact*nmr));
+        return answ;
     }
     public static void main(String args[])
     {
-          int result=bincoeff(5,4);
-          System.out.print("The binomial coefficient is:"+result);
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the value of n:");//input statement
+        int n=sc.nextInt();
+        System.out.print("Enter the value of r:");
+        int r=sc.nextInt();
+        int answer=factori(n,r);//calling the return type function
+        System.out.print("The factorial of the number is:"+answer);//printing output
     }
 }
+

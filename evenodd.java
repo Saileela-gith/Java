@@ -1,17 +1,26 @@
 import java.util.Scanner;
 public class evenodd {
-    //this code is to find the given number is even or odd
+    public static boolean even(int n)
+    {
+        if(n%2==0)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        System.out.print("Enter the number : ");
-        int num=sc.nextInt();
-        if((num)%2==0)
+        System.out.print("Enter the number:");
+        int n=sc.nextInt();
+        if (even(n))
         {
-            System.out.print("Even");
+            System.out.print("The number is even");
         }
         else{
-            System.out.print("Odd");
+            System.out.print("The number is odd");
         }
     }
 }
